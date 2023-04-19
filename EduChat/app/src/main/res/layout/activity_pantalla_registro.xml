@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    android:textAlignment="center"
+    tools:context=".PantallaRegistro">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="221dp"
+        android:layout_height="77dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.028"
+        app:srcCompat="@drawable/logo2_removebg_preview" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="153dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="108dp"
+        android:text="Registro"
+        android:textAlignment="center"
+        android:textColor="#103BC8"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="291dp"
+        android:layout_height="218dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.065">
+
+        <EditText
+            android:id="@+id/edtIngresarUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/baseline_person_24"
+            android:ems="10"
+            android:hint="Ingresar un nombre de usuario"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/edtCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/baseline_email_24"
+            android:ems="10"
+            android:hint="Ingresar e-mail"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/edtContraseña"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:drawableLeft="@drawable/baseline_lock_24"
+            android:ems="10"
+            android:hint="Ingresar password"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/edtConfirmarContra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/baseline_lock_24"
+            android:ems="10"
+            android:hint="Confirmar password"
+            android:inputType="textPassword" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnIngresarSignUp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#103BC8"
+        android:text="Registrar"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <Button
+        android:id="@+id/btnIngreso"
+        android:layout_width="154dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#103BC8"
+        android:text="INGRESAR"
+        app:layout_constraintEnd_toEndOf="@+id/btnIngresarSignUp"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="@+id/btnIngresarSignUp"
+        app:layout_constraintTop_toBottomOf="@+id/btnIngresarSignUp" />
+
+    <TextView
+        android:id="@+id/link_textview"
+        android:layout_width="198dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="12dp"
+        android:text="¿Tienes cuenta? Ingresa aqui"
+        android:textColor="#103BC8"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/btnIngreso"
+        app:layout_constraintStart_toStartOf="@+id/btnIngreso"
+        app:layout_constraintTop_toBottomOf="@+id/btnIngreso" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
