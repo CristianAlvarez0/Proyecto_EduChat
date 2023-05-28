@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.Menu;
@@ -38,6 +40,14 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+        SQLiteOpenHelper admin = new sv.edu.utec.educhat.BaseDatos.SQLiteOpenHelper(MainActivity.this);
+        SQLiteDatabase db =admin.getWritableDatabase();
+        if(db!=null){
+            Toast.makeText(this, "Base de datos creada", Toast.LENGTH_LONG).show();
+        }
+        else{
+            Toast.makeText(this, "Error en crear la Base de datos", Toast.LENGTH_LONG).show();
+        }
 
 
         //SUBRRAYAR TEXTO
@@ -53,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+
     public void PantallaRegistro(View v){
         Intent intento=new Intent(this,PantallaRegistro.class);
         startActivity(intento);

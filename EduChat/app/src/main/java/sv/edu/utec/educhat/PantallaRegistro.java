@@ -33,6 +33,9 @@ public class PantallaRegistro extends AppCompatActivity {
 
 
 
+
+
+
         RegresaLoging.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
