@@ -21,14 +21,15 @@ public class SQLiteOpenHelper extends android.database.sqlite.SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        /*db.execSQL("CREATE TABLE privilegios (Id_privilegio INTEGER PRIMARY KEY," +
-                " NombrePRI TEXT)");*/
+       /* db.execSQL("CREATE TABLE privilegios (Id_privilegio INTEGER PRIMARY KEY," +
+                " NombrePRI TEXT)");
 
-        /*db.execSQL("CREATE TABLE usuarios (Id_usuario INTEGER PRIMARY KEY," +
-                " NombreUSU TEXT, Id_privilegio INTEGER,Pass TEXT, Privilegio TEXT, Img TEXT, "+
+        db.execSQL("CREATE TABLE usuarios (Id_usuario INTEGER PRIMARY KEY," +
+                " NombreUSU TEXT,Correo TEXT,Email TEXT,Id_privilegio INTEGER,Pass TEXT,ConfirPass ,Privilegio TEXT, Img TEXT, "+
                 "FOREIGN KEY (Id_privilegio) REFERENCES privilegios(Id_privilegio))"
         );*/
-        db.execSQL("CREATE TABLE usuarios (Id_usuario INTEGER PRIMARY KEY," +
+
+       db.execSQL("CREATE TABLE usuarios (Id_usuario INTEGER PRIMARY KEY," +
                 " NombreUSU TEXT, correo TEXT,Pass TEXT, ConfirmPass TEXT)");
 
 
