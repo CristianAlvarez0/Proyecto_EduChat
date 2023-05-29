@@ -2,32 +2,22 @@ package sv.edu.utec.educhat.BaseDatos;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
+import android.widget.ArrayAdapter;
 
 import androidx.annotation.Nullable;
+
+import sv.edu.utec.educhat.AdaptadorChat;
 
 public class SQLiteOpenHelper extends android.database.sqlite.SQLiteOpenHelper {
 
     private static final int VERSION_BASEDATOS=1;
     private static final String NOMBRE_BASE="BASEDUCHAT.db";
 
-    /*public SQLiteOpenHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, name, factory, version);
-    }
-*/
     public SQLiteOpenHelper(@Nullable Context context) {
         super(context, NOMBRE_BASE, null, VERSION_BASEDATOS);
     }
-
     @Override
     public void onCreate(SQLiteDatabase db) {
-
-       /* db.execSQL("CREATE TABLE privilegios (Id_privilegio INTEGER PRIMARY KEY," +
-                " NombrePRI TEXT)");
-
-        db.execSQL("CREATE TABLE usuarios (Id_usuario INTEGER PRIMARY KEY," +
-                " NombreUSU TEXT,Correo TEXT,Email TEXT,Id_privilegio INTEGER,Pass TEXT,ConfirPass ,Privilegio TEXT, Img TEXT, "+
-                "FOREIGN KEY (Id_privilegio) REFERENCES privilegios(Id_privilegio))"
-        );*/
 
        db.execSQL("CREATE TABLE usuarios (Id_usuario INTEGER PRIMARY KEY," +
                 " NombreUSU TEXT, correo TEXT,Pass TEXT, ConfirmPass TEXT)");
